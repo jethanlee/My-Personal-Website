@@ -1,0 +1,541 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 115px;
+}
+
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: white;
+    color: #001742;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid #dce7ff;
+    box-shadow: 0 2px 8px #0059ff12;
+}
+
+.header_content {
+    max-width: 1500px;
+    min-height: 95px;
+    margin: 0 auto;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    color: #0059ff;
+    font-size: 44px;
+    font-weight: 900;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    color: #001742;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #0059ff;
+    color: white;
+}
+
+a:focus-visible {
+    outline: 3px solid #0059ff;
+    outline-offset: 5px;
+}
+
+.blue {
+    color: #0059ff;
+}
+
+.home_section {
+    min-height: calc(100vh - 95px);
+    padding: 65px 40px;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #ffffff, #edf4ff);
+}
+
+.home_content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.home_text {
+    flex: 1;
+    min-width: 0;
+}
+
+.small_title {
+    color: #0059ff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.home_text h1 {
+    font-size: clamp(60px, 6vw, 100px);
+    font-weight: 900;
+    line-height: 1.15;
+}
+
+.description {
+    max-width: 720px;
+    margin: 28px 0 35px;
+    font-size: 23px;
+    line-height: 1.8;
+    color: #465574;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.button {
+    display: inline-block;
+    padding: 14px 26px;
+    border: 2px solid #0059ff;
+    border-radius: 12px;
+    font-size: 21px;
+    font-weight: 600;
+    text-align: center;
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.primary {
+    background-color: #0059ff;
+    color: white;
+}
+
+.secondary {
+    background-color: white;
+    color: #0059ff;
+}
+
+.primary:hover {
+    background-color: #0045c7;
+    box-shadow: 0 6px 18px #0059ff26;
+}
+
+.secondary:hover {
+    background-color: #0059ff;
+    color: white;
+    box-shadow: 0 6px 18px #0059ff26;
+}
+
+.profile {
+    width: 430px;
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border: 5px solid white;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0 2px #0059ff,
+                0 18px 45px #0059ff20;
+}
+
+.profile img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about_section,
+.hobbies_section,
+.contact_section {
+    padding: 70px 40px;
+    border-top: 1px solid #dce7ff;
+}
+
+.section_container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section_title {
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto 50px;
+    padding-bottom: 12px;
+    border-bottom: 4px solid #0059ff;
+    font-size: 54px;
+    font-weight: 900;
+    text-align: center;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    gap: 65px;
+}
+
+.about_profile {
+    width: 390px;
+}
+
+.about_text {
+    flex: 1;
+    min-width: 0;
+}
+
+.about_text h3 {
+    font-size: 54px;
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.about_text h4 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #465574;
+    margin-bottom: 22px;
+}
+
+.about_text p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #465574;
+    margin-bottom: 18px;
+}
+
+.about_text p:last-child {
+    margin-bottom: 0;
+}
+
+.personal_details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    margin-bottom: 24px;
+    padding: 20px;
+    border-radius: 14px;
+    background-color: #edf4ff;
+}
+
+.personal_details p {
+    margin: 0;
+    font-size: 18px;
+}
+
+.personal_details strong {
+    color: #001742;
+}
+
+.about_cards,
+.hobby_cards {
+    display: flex;
+    gap: 25px;
+    margin-top: 50px;
+}
+
+.info_card,
+.hobby_card {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+    border-radius: 20px;
+    background-color: #edf4ff;
+}
+
+.info_card h3 {
+    font-size: 27px;
+    color: #0059ff;
+    margin-bottom: 14px;
+}
+
+.info_card p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: #465574;
+}
+
+.hobbies_section {
+    background: linear-gradient(120deg, #ffffff, #f3f7ff);
+}
+
+.section_description {
+    max-width: 750px;
+    margin: -20px auto 0;
+    font-size: 23px;
+    line-height: 1.7;
+    text-align: center;
+    color: #465574;
+}
+
+.hobby_card {
+    text-align: center;
+    padding: 40px 30px;
+}
+
+.icon {
+    display: block;
+    font-size: 75px;
+    margin-bottom: 22px;
+}
+
+.hobby_card h3,
+.contact_card h3 {
+    font-size: 32px;
+    color: #001742;
+    margin-bottom: 18px;
+}
+
+.hobby_card p,
+.contact_card p {
+    font-size: 21px;
+    line-height: 1.8;
+    color: #465574;
+}
+
+.contact_card {
+    max-width: 950px;
+    margin: 40px auto 0;
+    padding: 45px;
+    border-radius: 24px;
+    background-color: #edf4ff;
+    text-align: center;
+}
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+footer {
+    padding: 28px 20px;
+    border-top: 1px solid #dce7ff;
+    color: #465574;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media (max-width: 1100px) {
+    .header_content {
+        padding: 15px 25px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 17px;
+        padding: 10px 14px;
+    }
+
+    .home_content,
+    .about_content {
+        gap: 35px;
+    }
+
+    .profile {
+        width: 330px;
+    }
+
+    .about_profile {
+        width: 300px;
+    }
+
+    .home_text h1 {
+        font-size: 65px;
+    }
+
+    .description {
+        font-size: 20px;
+    }
+
+    .about_text h3 {
+        font-size: 42px;
+    }
+
+    .about_text h4 {
+        font-size: 22px;
+    }
+
+    .about_text p,
+    .info_card p,
+    .hobby_card p {
+        font-size: 18px;
+    }
+
+    .info_card,
+    .hobby_card {
+        padding: 25px;
+    }
+
+    .info_card h3 {
+        font-size: 23px;
+    }
+}
+
+@media (max-width: 800px) {
+    html {
+        scroll-padding-top: 150px;
+    }
+
+    .header_content {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+
+    .logo {
+        font-size: 34px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4px;
+    }
+
+    nav a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    .home_section {
+        min-height: auto;
+        padding: 50px 24px;
+    }
+
+    .home_content,
+    .about_content {
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    .home_text,
+    .about_text {
+        text-align: center;
+    }
+
+    .small_title {
+        font-size: 12px;
+    }
+
+    .home_text h1 {
+        font-size: 52px;
+    }
+
+    .description {
+        font-size: 18px;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .button {
+        font-size: 17px;
+        padding: 12px 20px;
+    }
+
+    .profile,
+    .about_profile {
+        width: 300px;
+        max-width: 100%;
+    }
+
+    .about_section,
+    .hobbies_section,
+    .contact_section {
+        padding: 45px 24px;
+    }
+
+    .section_title {
+        font-size: 40px;
+        margin-bottom: 35px;
+    }
+
+    .about_text h3 {
+        font-size: 38px;
+    }
+
+    .about_text h4 {
+        font-size: 21px;
+    }
+
+    .personal_details {
+        flex-direction: column;
+        gap: 8px;
+        text-align: left;
+    }
+
+    .about_cards,
+    .hobby_cards {
+        flex-direction: column;
+        margin-top: 30px;
+    }
+
+    .section_description {
+        font-size: 19px;
+        margin-top: -12px;
+    }
+
+    .contact_card {
+        padding: 30px 22px;
+    }
+
+    .contact_card p {
+        font-size: 18px;
+    }
+
+    .icon {
+        font-size: 65px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    nav a,
+    .button {
+        transition: none;
+    }
+}
